@@ -2,8 +2,8 @@
 # libraries needed
 pacman::p_load(readr, dplyr, tidyverse, caret)
 
-# set working directory to be PoVS
-setwd("C:/Users/Prince_Glass/Desktop/GlassRoot/UniversityProjects/PoVS")
+# source functions needed
+source("code/multicollinearity_checker.R")
 
 # load in raw data
 vacc_perc_data <- readr::read_csv(file = "raw_data/Survey Summary.csv", locale=locale(encoding="latin1")) |>
@@ -68,7 +68,8 @@ vacc_perc_data <- vacc_perc_data |>
                     `primary SM` = as.factor(`primary SM`),
                     `dly use` = as.factor(`dly use`),
                     trust = as.factor(trust)
-                  )
+                  ) |>
+                  na.omit()
 
 # one-hot encode categorical variables
 dummy <- caret::dummyVars(" ~ .", data = vacc_perc_data)
@@ -83,6 +84,13 @@ colnames(ohe_vacc_perc_data) <- c("18_24", "25_34", "35_44", "45_54", "55_64", "
                                   "ig", "sm_oth", "twit", "0_2_hr", "3_4_hr", "5_6_hr", "7_8_hr", 
                                   "9_plus_hr", "exposed", "doc", "fam", "gov", "peer", "web", 
                                   "anti_vacc")
+
+## check for multicollinearity in ohe data
+mc_checker(ohe_vacc_perc_data) |> as.data.frame() |> view()
+
+## remove the f and 0_2_hr variables to deal with severe multicollinearity
+ohe_vacc_perc_data <- ohe_vacc_perc_data |>
+                      select(-c(f, `0_2_hr`))
 
 # store processed data
 file.create("processed_data/vacc_data.csv")

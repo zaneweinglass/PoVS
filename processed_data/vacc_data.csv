@@ -211,13 +211,11 @@ age,gender,location,education,class,primary SM,dly use,exposed,trust,anti-vacc
 35-44,Female,NA U.S.,Assoc,Mid,FB,3-4,1,Web,1
 35-44,Female,NA U.S.,Bach,Mid,FB,3-4,1,Web,1
 25-34,Female,NA U.S.,Master,Mid,FB,0-2,1,Fam,1
-45-54,Female,NA U.S.,Assoc,Mid,FB,0-2,1,NA,1
 25-34,Female,NA U.S.,Assoc,Mid,FB,3-4,1,Web,1
 35-44,Female,NA U.S.,Master,Upp,FB,3-4,1,Peers,1
 18-24,Female,NA U.S.,9-13,Low,Other,0-2,1,Doc,0
 18-24,Female,NA U.S.,9-13,Mid,FB,0-2,1,Fam,1
 35-44,Female,NA U.S.,Highest,Upp,FB,0-2,1,Doc,1
-35-44,Female,EU,Assoc,Mid,IG,0-2,1,NA,0
 25-34,Female,NA U.S.,9-13,Mid,FB,0-2,1,Web,0
 45-54,Male,EU,9-13,Low,FB,0-2,1,Doc,0
 18-24,Female,NA U.S.,Assoc,Mid,IG,3-4,1,Doc,0
@@ -431,7 +429,6 @@ age,gender,location,education,class,primary SM,dly use,exposed,trust,anti-vacc
 45-54,Female,NA U.S.,Bach,Mid,Twitt,3-4,1,Doc,0
 18-24,Female,EU,Bach,Low,Other,5-6,1,Doc,0
 45-54,Female,NA other,Assoc,Low,Other,3-4,1,Doc,0
-18-24,Female,NA,9-13,Mid,Twitt,5-6,1,Doc,1
 25-34,Female,NA U.S.,Bach,Mid,FB,3-4,1,Doc,0
 18-24,Male,NA U.S.,9-13,Mid,Twitt,5-6,1,Doc,0
 18-24,Female,NA U.S.,Master,Mid,IG,0-2,1,Doc,0
@@ -506,7 +503,6 @@ age,gender,location,education,class,primary SM,dly use,exposed,trust,anti-vacc
 45-54,Male,NA U.S.,Master,Mid,Twitt,5-6,1,Doc,0
 18-24,Female,EU,9-13,Mid,Twitt,5-6,1,Doc,0
 25-34,Female,Aus/Ocea,Assoc,Mid,FB,3-4,1,Doc,0
-18-24,Female,NA,Bach,Mid,IG,7-8,1,Fam,1
 25-34,Female,NA U.S.,Assoc,Low,Twitt,0-2,1,Doc,0
 25-34,Female,NA U.S.,Bach,Mid,FB,3-4,1,Peers,0
 18-24,Female,NA U.S.,Bach,Mid,IG,3-4,1,Doc,0
@@ -518,7 +514,6 @@ age,gender,location,education,class,primary SM,dly use,exposed,trust,anti-vacc
 18-24,Female,NA U.S.,Assoc,Mid,IG,3-4,1,Doc,0
 45-54,Male,NA U.S.,Master,Mid,Twitt,0-2,1,Doc,0
 25-34,Female,NA other,Assoc,Mid,FB,0-2,1,Doc,1
-65+,Male,NA,Highest,Mid,FB,5-6,1,Doc,0
 35-44,Female,NA other,Assoc,Mid,FB,0-2,1,Doc,0
 18-24,Male,NA U.S.,Bach,Mid,IG,3-4,1,Doc,0
 35-44,Female,NA U.S.,Bach,Mid,Twitt,0-2,1,Doc,0
@@ -539,7 +534,6 @@ age,gender,location,education,class,primary SM,dly use,exposed,trust,anti-vacc
 45-54,Male,NA U.S.,9-13,Mid,FB,3-4,1,Doc,0
 18-24,Female,NA U.S.,9-13,Mid,IG,0-2,1,Doc,0
 25-34,Female,NA other,Assoc,Low,FB,3-4,1,Doc,1
-25-34,Female,NA,Bach,Mid,FB,3-4,1,Doc,0
 18-24,Female,NA U.S.,9-13,Mid,IG,3-4,1,Doc,1
 18-24,Female,NA other,Bach,Mid,FB,3-4,1,Doc,0
 35-44,Female,NA U.S.,Master,Upp,FB,0-2,1,Gov,0
@@ -552,7 +546,6 @@ age,gender,location,education,class,primary SM,dly use,exposed,trust,anti-vacc
 25-34,Female,NA U.S.,9-13,Mid,FB,3-4,1,Doc,1
 45-54,Female,NA U.S.,Assoc,Mid,FB,0-2,1,Doc,0
 18-24,Male,NA U.S.,9-13,Mid,IG,5-6,1,Doc,0
-25-34,Female,NA,Master,Upp,Twitt,3-4,1,Doc,0
 25-34,Female,NA U.S.,Assoc,Mid,IG,3-4,1,Doc,0
 18-24,Female,EU,K-8,Mid,IG,3-4,1,Doc,0
 25-34,Female,NA U.S.,Bach,Mid,Twitt,3-4,1,Doc,0
@@ -571,7 +564,6 @@ age,gender,location,education,class,primary SM,dly use,exposed,trust,anti-vacc
 25-34,Female,NA U.S.,9-13,Mid,FB,0-2,1,Doc,0
 55-64,Female,NA U.S.,Master,Upp,IG,0-2,1,Doc,0
 18-24,Female,NA U.S.,Assoc,Mid,FB,3-4,1,Doc,0
-18-24,Female,NA,9-13,Mid,Twitt,9+,1,Doc,0
 35-44,Female,NA U.S.,Bach,Mid,FB,0-2,1,Doc,0
 18-24,Female,NA U.S.,Assoc,Mid,Twitt,5-6,1,Doc,0
 25-34,Female,NA U.S.,Bach,Mid,FB,0-2,1,Doc,0
@@ -581,7 +573,6 @@ age,gender,location,education,class,primary SM,dly use,exposed,trust,anti-vacc
 18-24,Female,NA U.S.,9-13,Low,FB,5-6,1,Doc,0
 18-24,Female,Aus/Ocea,Bach,Mid,FB,3-4,1,Doc,0
 55-64,Female,Aus/Ocea,Bach,Mid,FB,3-4,1,Doc,0
-25-34,Female,NA,Bach,Mid,FB,9+,1,Doc,0
 25-34,Female,NA U.S.,Master,Mid,Twitt,0-2,1,Doc,0
 18-24,Male,NA U.S.,9-13,Mid,Twitt,3-4,1,Doc,0
 35-44,Female,NA other,9-13,Upp,FB,5-6,1,Doc,1
@@ -594,7 +585,6 @@ age,gender,location,education,class,primary SM,dly use,exposed,trust,anti-vacc
 18-24,Male,NA U.S.,Master,Mid,Twitt,3-4,0,Doc,1
 18-24,Male,NA U.S.,9-13,Upp,Twitt,3-4,1,Doc,0
 35-44,Female,NA U.S.,Bach,Mid,Twitt,0-2,1,Doc,0
-25-34,Female,NA,Master,Mid,Twitt,3-4,1,Doc,1
 18-24,Female,NA U.S.,Assoc,Low,IG,3-4,1,Doc,0
 18-24,Female,NA U.S.,Bach,Upp,Twitt,9+,1,Doc,0
 55-64,Female,Aus/Ocea,9-13,Low,FB,5-6,1,Doc,0
@@ -675,7 +665,6 @@ age,gender,location,education,class,primary SM,dly use,exposed,trust,anti-vacc
 25-34,Female,NA U.S.,Bach,Mid,FB,3-4,1,Doc,0
 25-34,Female,NA U.S.,Assoc,Mid,FB,5-6,1,Doc,0
 18-24,Female,NA U.S.,Assoc,Upp,FB,3-4,1,Doc,0
-18-24,Female,NA,9-13,Low,Twitt,7-8,1,Doc,1
 25-34,Male,EU,Master,Mid,FB,3-4,1,Doc,0
 25-34,Female,NA U.S.,Bach,Mid,FB,0-2,1,Doc,0
 45-54,Female,NA U.S.,Master,Upp,Twitt,0-2,1,Doc,0
@@ -727,7 +716,6 @@ age,gender,location,education,class,primary SM,dly use,exposed,trust,anti-vacc
 18-24,Female,NA U.S.,9-13,Mid,Twitt,5-6,1,Fam,0
 18-24,Female,NA other,Bach,Mid,IG,0-2,1,Doc,0
 45-54,Male,Aus/Ocea,Master,Mid,FB,3-4,1,Doc,0
-18-24,Female,NA,9-13,Mid,Other,5-6,1,Web,0
 18-24,Female,NA U.S.,9-13,Mid,Twitt,5-6,1,Doc,0
 18-24,Female,NA U.S.,Assoc,Low,Twitt,9+,1,Doc,0
 18-24,Male,NA U.S.,Bach,Mid,Twitt,0-2,1,Doc,0
@@ -743,7 +731,6 @@ age,gender,location,education,class,primary SM,dly use,exposed,trust,anti-vacc
 35-44,Male,NA other,Highest,Mid,FB,0-2,1,Doc,0
 25-34,Female,Aus/Ocea,9-13,Mid,FB,3-4,1,Doc,0
 35-44,Female,NA U.S.,Bach,Low,FB,0-2,1,Doc,0
-25-34,Male,NA,Bach,Low,Twitt,3-4,0,Doc,0
 18-24,Female,NA U.S.,Assoc,Mid,FB,3-4,1,Doc,0
 45-54,Male,NA other,9-13,Mid,FB,3-4,1,Doc,0
 18-24,Female,NA U.S.,Bach,Mid,Twitt,3-4,1,Doc,0
@@ -751,7 +738,6 @@ age,gender,location,education,class,primary SM,dly use,exposed,trust,anti-vacc
 25-34,Female,EU,Bach,Mid,FB,3-4,1,Doc,0
 35-44,Female,SA,Master,Mid,Twitt,9+,1,Doc,0
 45-54,Female,NA U.S.,Bach,Mid,Other,3-4,1,Web,0
-45-54,Male,NA,Master,Mid,FB,0-2,1,Doc,0
 35-44,Female,NA U.S.,Master,Mid,FB,0-2,1,Doc,0
 18-24,Female,NA U.S.,Assoc,Mid,Twitt,3-4,1,Doc,0
 18-24,Female,EU,Master,Mid,Twitt,3-4,1,Doc,0
@@ -768,7 +754,6 @@ age,gender,location,education,class,primary SM,dly use,exposed,trust,anti-vacc
 18-24,Female,NA U.S.,Bach,Upp,Twitt,3-4,1,Doc,0
 25-34,Female,NA U.S.,Bach,Mid,FB,3-4,1,Peers,0
 25-34,Female,NA U.S.,Bach,Mid,FB,0-2,1,Doc,0
-18-24,Female,NA,9-13,Mid,Twitt,5-6,1,Doc,0
 35-44,Female,NA other,Master,Mid,FB,3-4,1,Gov,0
 18-24,Male,Aus/Ocea,9-13,Mid,FB,0-2,1,Doc,0
 25-34,Female,NA U.S.,Assoc,Mid,FB,3-4,1,Doc,0
@@ -808,7 +793,6 @@ age,gender,location,education,class,primary SM,dly use,exposed,trust,anti-vacc
 35-44,Female,NA U.S.,Assoc,Mid,Other,0-2,1,Doc,0
 25-34,Female,NA U.S.,Highest,Mid,FB,0-2,1,Doc,0
 35-44,Female,NA U.S.,Master,Mid,FB,0-2,1,Doc,0
-25-34,Male,NA,Assoc,Upp,IG,0-2,0,Web,1
 35-44,Female,Aus/Ocea,Bach,Mid,FB,3-4,1,Doc,0
 45-54,Male,Aus/Ocea,Bach,Mid,FB,0-2,1,Doc,0
 45-54,Female,NA U.S.,Bach,Mid,FB,3-4,1,Doc,0
@@ -819,7 +803,6 @@ age,gender,location,education,class,primary SM,dly use,exposed,trust,anti-vacc
 18-24,Female,NA U.S.,9-13,Mid,Twitt,0-2,1,Doc,0
 35-44,Female,NA U.S.,Master,Mid,Twitt,0-2,1,Web,1
 25-34,Female,EU,Assoc,Low,FB,3-4,1,Doc,0
-45-54,Male,NA,9-13,Low,Twitt,0-2,1,Doc,0
 35-44,Female,EU,Highest,Mid,FB,0-2,1,Doc,0
 18-24,Female,EU,Bach,Mid,FB,0-2,1,Doc,0
 35-44,Female,Aus/Ocea,Assoc,Mid,FB,3-4,1,Doc,0
@@ -1007,7 +990,6 @@ age,gender,location,education,class,primary SM,dly use,exposed,trust,anti-vacc
 35-44,Female,NA U.S.,Assoc,Low,FB,5-6,1,Doc,0
 45-54,Female,NA other,Assoc,Mid,FB,0-2,1,Doc,0
 65+,Female,NA U.S.,Master,Mid,FB,3-4,1,Doc,0
-45-54,Female,NA,Bach,Upp,IG,3-4,1,Doc,0
 18-24,Female,NA other,Bach,Mid,Twitt,3-4,1,Doc,0
 55-64,Female,NA other,Bach,Mid,FB,0-2,1,Doc,0
 25-34,Female,NA other,Assoc,Mid,FB,3-4,1,Doc,0
@@ -1420,7 +1402,6 @@ age,gender,location,education,class,primary SM,dly use,exposed,trust,anti-vacc
 25-34,Female,NA U.S.,Master,Mid,FB,0-2,1,Doc,0
 35-44,Female,EU,Master,Mid,FB,0-2,1,Doc,0
 25-34,Female,NA U.S.,Bach,Mid,FB,0-2,1,Doc,0
-25-34,Male,NA,Bach,Mid,Twitt,3-4,1,Doc,0
 25-34,Female,NA other,Assoc,Mid,FB,0-2,0,Doc,1
 35-44,Female,NA U.S.,Assoc,Low,FB,3-4,1,Doc,0
 65+,Female,NA U.S.,Bach,Mid,FB,0-2,1,Doc,0
@@ -1560,7 +1541,6 @@ age,gender,location,education,class,primary SM,dly use,exposed,trust,anti-vacc
 35-44,Female,NA U.S.,9-13,Mid,FB,3-4,1,Doc,0
 45-54,Male,NA U.S.,Bach,Mid,FB,3-4,1,Web,1
 55-64,Female,NA U.S.,Assoc,Mid,FB,0-2,0,Doc,1
-65+,Male,NA,Highest,Mid,FB,0-2,0,Doc,1
 45-54,Male,NA U.S.,Assoc,Mid,FB,5-6,1,Peers,0
 35-44,Female,NA U.S.,Bach,Mid,Other,7-8,1,Doc,0
 25-34,Female,NA U.S.,Bach,Mid,IG,3-4,1,Doc,0
@@ -1569,7 +1549,6 @@ age,gender,location,education,class,primary SM,dly use,exposed,trust,anti-vacc
 35-44,Male,NA U.S.,Master,Mid,IG,0-2,1,Gov,0
 25-34,Female,NA U.S.,Assoc,Low,IG,3-4,1,Doc,0
 45-54,Female,NA U.S.,Assoc,Mid,FB,0-2,1,Doc,0
-18-24,Male,NA,Bach,Upp,FB,5-6,0,Doc,0
 45-54,Female,NA other,Highest,Mid,FB,0-2,1,Doc,0
 25-34,Female,NA U.S.,Bach,Mid,FB,0-2,1,Doc,0
 45-54,Male,NA other,Bach,Mid,FB,0-2,0,Web,0
@@ -1600,7 +1579,6 @@ age,gender,location,education,class,primary SM,dly use,exposed,trust,anti-vacc
 18-24,Male,NA U.S.,Assoc,Mid,FB,0-2,1,Doc,0
 35-44,Female,NA U.S.,9-13,Low,FB,3-4,1,Doc,1
 65+,Female,NA U.S.,9-13,Low,FB,0-2,1,Fam,1
-18-24,Male,NA,Bach,Mid,Twitt,3-4,1,Doc,0
 35-44,Female,NA U.S.,Bach,Mid,FB,0-2,1,Web,1
 25-34,Female,NA U.S.,Highest,Mid,Twitt,0-2,1,Doc,0
 25-34,Female,NA U.S.,Bach,Upp,Twitt,3-4,1,Doc,0
@@ -1623,7 +1601,6 @@ age,gender,location,education,class,primary SM,dly use,exposed,trust,anti-vacc
 55-64,Female,NA U.S.,Bach,Mid,FB,0-2,1,Doc,0
 55-64,Female,NA U.S.,Assoc,Mid,Twitt,0-2,1,Doc,0
 18-24,Female,NA U.S.,Bach,Mid,FB,3-4,1,Doc,0
-65+,Male,NA U.S.,Bach,Mid,FB,0-2,1,NA,1
 45-54,Male,NA other,9-13,Mid,IG,0-2,1,Doc,1
 45-54,Female,NA U.S.,Assoc,Mid,FB,7-8,1,Doc,0
 35-44,Male,NA other,Master,Upp,FB,0-2,1,Doc,0
@@ -1873,7 +1850,6 @@ age,gender,location,education,class,primary SM,dly use,exposed,trust,anti-vacc
 35-44,Female,NA U.S.,Master,Mid,FB,0-2,0,Doc,0
 25-34,Male,NA U.S.,Assoc,Mid,FB,5-6,1,Doc,1
 18-24,Female,NA U.S.,Master,Mid,IG,0-2,1,Doc,0
-65+,Female,Aus/Ocea,Bach,Mid,FB,3-4,1,NA,1
 55-64,Female,NA U.S.,9-13,Mid,FB,3-4,1,Doc,1
 55-64,Male,NA U.S.,9-13,Mid,FB,5-6,1,Gov,0
 18-24,Female,NA U.S.,Bach,Low,FB,0-2,1,Doc,0
@@ -1991,7 +1967,6 @@ age,gender,location,education,class,primary SM,dly use,exposed,trust,anti-vacc
 35-44,Female,NA U.S.,Bach,Mid,Twitt,3-4,1,Doc,0
 25-34,Female,NA U.S.,Master,Mid,Twitt,0-2,1,Doc,0
 35-44,Female,NA U.S.,Assoc,Mid,FB,0-2,1,Doc,0
-25-34,Male,NA,Bach,Mid,FB,0-2,1,Doc,0
 45-54,Female,NA U.S.,Highest,Mid,FB,0-2,1,Peers,0
 45-54,Male,EU,9-13,Mid,Twitt,3-4,1,Doc,0
 55-64,Female,NA U.S.,Master,Mid,Twitt,0-2,1,Doc,0
@@ -2271,7 +2246,6 @@ age,gender,location,education,class,primary SM,dly use,exposed,trust,anti-vacc
 25-34,Female,NA other,Assoc,Mid,FB,3-4,1,Peers,1
 25-34,Male,NA U.S.,Bach,Mid,IG,3-4,0,Web,1
 18-24,Female,NA U.S.,9-13,Mid,FB,0-2,1,Peers,1
-55-64,Female,NA U.S.,Highest,Upp,FB,3-4,1,NA,1
 55-64,Female,NA U.S.,Assoc,Mid,FB,3-4,1,Doc,0
 25-34,Male,NA other,Highest,Mid,FB,0-2,1,Doc,0
 18-24,Male,NA U.S.,9-13,Upp,IG,3-4,1,Doc,0
