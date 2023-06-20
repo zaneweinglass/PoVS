@@ -1,7 +1,18 @@
 
 # function to create the predicted vs actual tibble
 create_pred_act <- function(model, new_data, new_y, prediction_type) {
+  
+  if (is.null(new_data)) {
+    return_tibble <- model |> 
+                     as_tibble() |> 
+                     mutate(prediction = value) |> 
+                     select(-value) |>
+                     mutate(actual = new_y)
+    return(return_tibble)
+  }
+  
   if (!is.null(prediction_type)) {
+    
     if (prediction_type == "response") {
       return_tibble <- predict(model, 
                                newdata = new_data,
