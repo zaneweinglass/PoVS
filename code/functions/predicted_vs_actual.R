@@ -24,6 +24,12 @@ create_pred_act <- function(model, new_data, new_y, prediction_type) {
                        )) |>
                        dplyr::select(-value) |>
                        mutate(actual = new_data$anti_vacc) 
+    } else if (prediction_type == "svm") {
+      return_tibble <- predict(model, newdata = new_data) |>
+                               as_tibble() |>
+                               mutate(prediction = value) |>
+                               select(-value) |>
+                               mutate(actual = new_y$y)
     } else {
       return_tibble <- predict(model, 
                                newdata = new_data,
