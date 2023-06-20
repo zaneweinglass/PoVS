@@ -35,7 +35,7 @@ pred_act <- create_pred_act(model = model_bag,
                             prediction_type = "class")
 
 # get mcr
-mcr_bagging <- mcr(pred_act_new)
+mcr_bagging <- mcr(pred_act)
 
 # create feature importance visualization
 importance(model_bag) |>

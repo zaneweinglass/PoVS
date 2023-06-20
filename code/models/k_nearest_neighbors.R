@@ -67,7 +67,7 @@ tuning_results |>
   arrange(mcr)
 
 ## optimal k value
-k_vs_optimal <- 3
+k_vs_optimal <- 4
 
 ## fit new model with optimal k value
 knn_vs_optimal <-  knn(x_train, x_test, y_train, k = k_vs_optimal)

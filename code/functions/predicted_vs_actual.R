@@ -6,7 +6,7 @@ create_pred_act <- function(model, new_data, new_y, prediction_type) {
     return_tibble <- model |> 
                      as_tibble() |> 
                      mutate(prediction = value) |> 
-                     select(-value) |>
+                     dplyr::select(-value) |>
                      mutate(actual = new_y)
     return(return_tibble)
   }
