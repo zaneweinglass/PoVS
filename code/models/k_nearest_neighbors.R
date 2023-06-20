@@ -66,7 +66,7 @@ for (i in 1:nrow(tuning_results)) {
 tuning_results |>
   arrange(mcr)
 
-## optmal k value
+## optimal k value
 k_vs_optimal <- 3
 
 ## fit new model with optimal k value

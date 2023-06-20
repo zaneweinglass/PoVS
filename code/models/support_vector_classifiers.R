@@ -55,7 +55,7 @@ radial_pred_act <- create_pred_act(model = radial_tune_out$best.model,
                                    prediction_type = "svm")
 
 ## mcr
-mcr_radial <- mcr(pred_act_test)
+mcr_radial <- mcr(radial_pred_act)
 
 # polynomial kernel
 
