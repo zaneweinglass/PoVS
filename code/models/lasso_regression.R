@@ -50,3 +50,23 @@ pred_act_LMM <- create_pred_act(model = lambda_min_model,
 
 ## mcr
 mcr_lasso <- mcr(pred_act_LMM)
+
+## create feature importance visualization
+caret::varImp(lambda_min_model, lambda = cv_model$lambda.min) |>
+  as_tibble() |>
+  mutate(abs_t_stat = Overall,
+         feature = row.names(caret::varImp(lambda_min_model, lambda = cv_model$lambda.min))) |>
+  dplyr::select(-Overall) |>
+  arrange(desc(abs_t_stat)) |>
+  ggplot(aes(x = reorder(feature, abs_t_stat),
+             y = abs_t_stat,
+             fill = feature)) +
+  geom_bar(stat = "identity") +
+  coord_flip() +
+  theme_bw() +
+  labs(
+    x = "Feature",
+    y = "Importance (|t-stat|)",
+    title = "Feature Importance: Optimized Lasso Regression"
+  ) +
+  theme(legend.position = "none")
