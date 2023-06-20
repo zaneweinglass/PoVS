@@ -3,10 +3,11 @@
 pacman::p_load(readr, dplyr, tidyverse, caret)
 
 # source functions needed
-source("code/multicollinearity_checker.R")
+source("code/functions/multicollinearity_checker.R")
 
 # load in raw data
-vacc_perc_data <- readr::read_csv(file = "raw_data/Survey Summary.csv", locale=locale(encoding="latin1")) |>
+vacc_perc_data <- readr::read_csv(file = "raw_data/Survey Summary.csv", 
+                                  locale=locale(encoding="latin1")) |>
                   tibble::as_tibble()
 
 # select columns and rows of interest
@@ -78,19 +79,18 @@ ohe_vacc_perc_data <- data.frame(predict(dummy, newdata = vacc_perc_data)) |>
 rm(dummy)
 
 ## create concise naming for one-hot encoded variables
-colnames(ohe_vacc_perc_data) <- c("18_24", "25_34", "35_44", "45_54", "55_64", "65_plus", "f", "m", 
-                                  "afr", "aus_ocea", "eu", "na_oth", "na_us", "sa", "9_13", "assoc", 
-                                  "bach", "highest", "k_8", "mast", "no_ed", "low", "mid", "upp", "fb", 
-                                  "ig", "sm_oth", "twit", "0_2_hr", "3_4_hr", "5_6_hr", "7_8_hr", 
-                                  "9_plus_hr", "exposed", "doc", "fam", "gov", "peer", "web", 
-                                  "anti_vacc")
+colnames(ohe_vacc_perc_data) <- c("age_18_24", "age_25_34", "age_35_44", "age_45_54", "age_55_64", "age_65_plus", 
+                                  "f", "m", "afr", "aus_ocea", "eu", "na_oth", "na_us", "sa", "grade_9_13", "assoc", 
+                                  "bach", "highest", "k_8", "mast", "no_ed", "low", "mid", "upp", "fb", "ig", "sm_oth", 
+                                  "twit", "hr_0_2", "hr_3_4", "hr_5_6", "hr_7_8", "hr_9_plus", "exposed", "doc", "fam", 
+                                  "gov", "peer", "web", "anti_vacc")
 
 ## check for multicollinearity in ohe data
 mc_checker(ohe_vacc_perc_data) |> as.data.frame() |> view()
 
 ## remove the f and 0_2_hr variables to deal with severe multicollinearity
 ohe_vacc_perc_data <- ohe_vacc_perc_data |>
-                      select(-c(f, `0_2_hr`))
+                      select(-c(f, `hr_0_2`))
 
 # store processed data
 file.create("processed_data/vacc_data.csv")
