@@ -52,7 +52,8 @@ fwd_fitted_model <- stats::glm(anti_vacc ~ .,
 
 ## predicted vs actual
 fwd_pred_act <- create_pred_act(model = fwd_fitted_model, 
-                                new_data = fwd_test, 
+                                new_data = fwd_test,
+                                new_y = NULL,
                                 prediction_type = "response")
 
 ## calculate missclassification rate
@@ -103,7 +104,8 @@ bwd_fitted_model <- stats::glm(anti_vacc ~ .,
 
 ## predicted vs actual
 bwd_pred_act <- create_pred_act(model = bwd_fitted_model, 
-                                new_data = bwd_test, 
+                                new_data = bwd_test,
+                                new_y = NULL,
                                 prediction_type = "response")
 
 ## calculate missclassification rate

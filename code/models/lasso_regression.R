@@ -2,7 +2,10 @@
 pacman::p_load(readr, dplyr, tidyverse, stats, caret, glmnet)
 
 # source functions needed
-source("code/create_train_test.R")
+source("code/functions/create_train_test.R")
+source("code/functions/modify_train_test.R")
+source("code/functions/predicted_vs_actual.R")
+source("code/functions/compute_missclassification_rate.R")
 
 # load data set
 dta <- readr::read_csv("processed_data/ohe_vacc_data.csv")
@@ -13,23 +16,12 @@ train <- train_test[[1]]
 test <- train_test[[2]]
 rm(train_test)
 
-# create input matrix for training and test set
-x_train <- train |>
-  dplyr::select(-anti_vacc) |>
-  data.matrix()
-
-x_test <- test |>
-  dplyr::select(-anti_vacc) |>
-  data.matrix()
-
-# create response variable for training and test set
-y_train <- train |>
-  dplyr::select(anti_vacc) |>
-  as_vector()
-
-y_test <- test |>
-  dplyr::select(anti_vacc) |>
-  as_vector()
+modified_train_test <- mod_trn_tst(train, test)
+x_train <- modified_train_test[[1]]
+x_test <- modified_train_test[[2]]
+y_train <- modified_train_test[[3]]
+y_test <- modified_train_test[[4]]
+rm(modified_train_test)
 
 # base model
 base_model <- glmnet(x_train, y_train, alpha = 1, family = "binomial")
@@ -43,12 +35,6 @@ cv_model <- cv.glmnet(x_train, y_train, alpha = 1, family = "binomial")
 ## cross-validation error WRT/ log lambda
 plot(cv_model)
 
-cv_model$lambda.min
-cv_model$lambda.1se
-
-coef(cv_model, cv_model$lambda.min)
-coef(cv_model, cv_model$lambda.1se)
-
 # lambda.min model
 lambda_min_model <- glmnet(x_train, 
                            y_train, 
@@ -56,16 +42,11 @@ lambda_min_model <- glmnet(x_train,
                            lambda = cv_model$lambda.min, 
                            family = "binomial")
 
-## prediction on test data
-pred_act_LMM <- lambda_min_model |>
-  predict(newx = x_test) |>
-  as_tibble() |>
-  mutate(predicted = case_when(
-    s0 <= 0.5 ~ 0,
-    T ~ 1
-  )) |>
-  select(-s0) |>
-  mutate(actual = y_test)
+## predicted vs actual
+pred_act_LMM <- create_pred_act(model = lambda_min_model,
+                                new_data = x_test,
+                                new_y = y_test,
+                                prediction_type = NULL)
 
 ## mcr
-mcr <- sum(pred_act_LMM$predicted != pred_act_LMM$actual) / nrow(pred_act_LMM)
+mcr_lasso <- mcr(pred_act_LMM)

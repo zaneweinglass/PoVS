@@ -4,6 +4,8 @@ pacman::p_load(readr, dplyr, tidyverse, stats, caret, ggplot2)
 
 # source functions needed
 source("code/functions/create_train_test.R")
+source("code/functions/predicted_vs_actual.R")
+source("code/functions/compute_missclassification_rate.R")
 
 # load data set
 dta <- readr::read_csv("processed_data/ohe_vacc_data.csv")
@@ -20,17 +22,13 @@ options(scipen = 999)
 summary(model)
 
 # predicted vs actual
-pred_act <- predict(model, test, type="response") |> 
-  as_tibble() |>
-  mutate(prediction = case_when(
-    value <= 0.5 ~ 0,
-    T ~ 1
-  )) |>
-  select(-value) |>
-  mutate(actual = test$anti_vacc)
+pred_act <- create_pred_act(model = model, 
+                            new_data = test, 
+                            new_y = NULL, 
+                            prediction_type = "response")
 
 # calculate missclassification rate
-mcr <- sum(pred_act$prediction != pred_act$actual) / nrow(pred_act)
+mcr_logistic <- mcr(pred_act)
 
 # create feature importance visualization
 caret::varImp(model) |>
